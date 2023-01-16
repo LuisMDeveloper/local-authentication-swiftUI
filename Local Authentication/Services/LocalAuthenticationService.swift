@@ -27,4 +27,25 @@ class LocalAuthenticationService {
             completion(.failure(AppError.error("No Biometrics Available")))
         }
     }
+    
+    class func authenticateWithBiometrics() async -> Result<Void, Error> {
+        let context = LAContext()
+        var error: NSError?
+
+        if context.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: &error) {
+            let reason = "We need to unlock your data."
+            do {
+                let result = try await context.evaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, localizedReason: reason)
+                if result {
+                    return .success(())
+                } else {
+                    return .failure(AppError.error(error?.localizedDescription ?? "Error Undefined"))
+                }
+            } catch {
+                return .failure(error)
+            }
+        } else {
+            return .failure(AppError.error("No Biometrics Available"))
+        }
+    }
 }
