@@ -7,18 +7,28 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4A2F957842BFB8AB4DAC1CC4 /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A2F9250293F207DE2E94759 /* AppError.swift */; };
+		4A2F9CF64C45142A771B526F /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 4A2F993DDF313CF342DC1CF6 /* .gitignore */; };
 		C14905432975F622008EB644 /* Local_AuthenticationApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C14905422975F622008EB644 /* Local_AuthenticationApp.swift */; };
 		C14905452975F622008EB644 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C14905442975F622008EB644 /* ContentView.swift */; };
 		C14905472975F625008EB644 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C14905462975F625008EB644 /* Assets.xcassets */; };
 		C149054A2975F625008EB644 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C14905492975F625008EB644 /* Preview Assets.xcassets */; };
+		C14905532975FBD5008EB644 /* LocalAuthenticationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C14905522975FBD5008EB644 /* LocalAuthenticationService.swift */; };
+		C1490558297602B4008EB644 /* LockScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1490557297602B4008EB644 /* LockScreenView.swift */; };
+		C149055A297604B7008EB644 /* UnlockWithBiometricsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1490559297604B7008EB644 /* UnlockWithBiometricsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4A2F9250293F207DE2E94759 /* AppError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppError.swift; sourceTree = "<group>"; };
+		4A2F993DDF313CF342DC1CF6 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = file.gitignore; path = .gitignore; sourceTree = "<group>"; };
 		C149053F2975F622008EB644 /* Local Authentication.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Local Authentication.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C14905422975F622008EB644 /* Local_AuthenticationApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Local_AuthenticationApp.swift; sourceTree = "<group>"; };
 		C14905442975F622008EB644 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		C14905462975F625008EB644 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C14905492975F625008EB644 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		C14905522975FBD5008EB644 /* LocalAuthenticationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalAuthenticationService.swift; sourceTree = "<group>"; };
+		C1490557297602B4008EB644 /* LockScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LockScreenView.swift; sourceTree = "<group>"; };
+		C1490559297604B7008EB644 /* UnlockWithBiometricsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnlockWithBiometricsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +47,7 @@
 			children = (
 				C14905412975F622008EB644 /* Local Authentication */,
 				C14905402975F622008EB644 /* Products */,
+				4A2F993DDF313CF342DC1CF6 /* .gitignore */,
 			);
 			sourceTree = "<group>";
 		};
@@ -51,6 +62,9 @@
 		C14905412975F622008EB644 /* Local Authentication */ = {
 			isa = PBXGroup;
 			children = (
+				C14905502975FB71008EB644 /* Services */,
+				C14905512975FB9C008EB644 /* Views */,
+				C14905542975FEC2008EB644 /* Utils */,
 				C14905422975F622008EB644 /* Local_AuthenticationApp.swift */,
 				C14905442975F622008EB644 /* ContentView.swift */,
 				C14905462975F625008EB644 /* Assets.xcassets */,
@@ -65,6 +79,31 @@
 				C14905492975F625008EB644 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		C14905502975FB71008EB644 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				C14905522975FBD5008EB644 /* LocalAuthenticationService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		C14905512975FB9C008EB644 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C1490557297602B4008EB644 /* LockScreenView.swift */,
+				C1490559297604B7008EB644 /* UnlockWithBiometricsView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		C14905542975FEC2008EB644 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				4A2F9250293F207DE2E94759 /* AppError.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,6 +166,7 @@
 			files = (
 				C149054A2975F625008EB644 /* Preview Assets.xcassets in Resources */,
 				C14905472975F625008EB644 /* Assets.xcassets in Resources */,
+				4A2F9CF64C45142A771B526F /* .gitignore in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,8 +177,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C14905532975FBD5008EB644 /* LocalAuthenticationService.swift in Sources */,
 				C14905452975F622008EB644 /* ContentView.swift in Sources */,
 				C14905432975F622008EB644 /* Local_AuthenticationApp.swift in Sources */,
+				C1490558297602B4008EB644 /* LockScreenView.swift in Sources */,
+				4A2F957842BFB8AB4DAC1CC4 /* AppError.swift in Sources */,
+				C149055A297604B7008EB644 /* UnlockWithBiometricsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,6 +314,7 @@
 				DEVELOPMENT_TEAM = TD7SBTNXZJ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSFaceIDUsageDescription = "We need to unlock your data.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -299,6 +344,7 @@
 				DEVELOPMENT_TEAM = TD7SBTNXZJ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSFaceIDUsageDescription = "We need to unlock your data.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
