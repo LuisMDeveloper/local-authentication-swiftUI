@@ -38,11 +38,10 @@ struct LockScreenView<Content: View>: View {
             }
         }
     }
-    
+
     func authenticateWithBiometrics() {
-        Task {
-            // Llama al servicio de autenticación local para autenticar con biometría
-            let result = await LocalAuthenticationService.authenticateWithBiometrics()
+        // Llama al servicio de autenticación local para autenticar con biometría
+        LocalAuthenticationService.authenticateWithBiometrics { result in
             switch result {
             case .success():
                 // Si es exitosa, desbloquea la vista
