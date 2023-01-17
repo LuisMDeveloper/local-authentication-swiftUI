@@ -1,6 +1,10 @@
 # Autenticación Biométrica en SwiftUI
 
+## Introducción
+
 La tecnología de reconocimiento facial y huella dactilar, como FaceID y TouchID, se ha vuelto cada vez más popular en los dispositivos móviles modernos. En este tutorial, le mostraremos cómo utilizar la funcionalidad de FaceID y TouchID en sus aplicaciones SwiftUI para proporcionar una mayor seguridad y comodidad para sus usuarios.
+
+## LocalAuthentication
 
 ```swift
 import LocalAuthentication
@@ -39,6 +43,8 @@ Antes de continuar tenemos que agregar la clave `NSFaceIDUsageDescription` a nue
 La razón de esto es que, de acuerdo con las guías de desarrollo de Apple, todas las aplicaciones que utilizan características privadas del sistema, como Face ID, deben proporcionar una descripción clara y precisa del uso de estas características. Esto proporciona transparencia para los usuarios sobre cómo se utilizará la información biométrica que proporcionan, y les permite tomar una decisión informada.
 
 Ahora, veamos como podemos usar esta función con un ejemplo:
+
+## LockScreen
 
 ```swift
 import SwiftUI
@@ -101,7 +107,9 @@ El método `authenticateWithBiometrics` llama al servicio de autenticación loca
 
 El cuerpo de la estructura también tiene un listener para el cambio de estado de escena. Si el estado cambia a background, el contenido se bloquea cambiando el estado `isUnlocked` a falso. Esto es importante si queremos proteger la información después de que la aplicación pase a background.
 
-Por ultimo, veamos lo sencillo que es usar la vista `LockScreenView`:
+## Ejemplo
+
+Por último, veamos lo sencillo que es usar la vista `LockScreenView`:
 
 ```swift
 import SwiftUI
