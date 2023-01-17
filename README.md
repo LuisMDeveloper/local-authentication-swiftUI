@@ -42,9 +42,9 @@ Antes de continuar tenemos que agregar la clave `NSFaceIDUsageDescription` a nue
 
 La razón de esto es que, de acuerdo con las guías de desarrollo de Apple, todas las aplicaciones que utilizan características privadas del sistema, como Face ID, deben proporcionar una descripción clara y precisa del uso de estas características. Esto proporciona transparencia para los usuarios sobre cómo se utilizará la información biométrica que proporcionan, y les permite tomar una decisión informada.
 
-Ahora, veamos como podemos usar esta función con un ejemplo:
-
 ## LockScreen
+
+Ahora, veamos como podemos usar esta función con un ejemplo:
 
 ```swift
 import SwiftUI
